@@ -1,0 +1,10 @@
+<resources>
+    <color name="verde_primario">#2E7D32</color>
+    <color name="verde_oscuro">#1B5E20</color>
+    <color name="verde_claro">#A5D6A7</color>
+    <color name="acento_azul">#0288D1</color>
+    <color name="fondo">#F1F8E9</color>
+    <color name="texto_oscuro">#212121</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="alerta">#D32F2F</color>
+</resources>

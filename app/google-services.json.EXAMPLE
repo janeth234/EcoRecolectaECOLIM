@@ -1,0 +1,22 @@
+{
+  "_comentario": "Este es solo un EJEMPLO de la estructura. Debes reemplazar este archivo por el 'google-services.json' real que descargues desde la consola de Firebase (https://console.firebase.google.com) al registrar la app con el applicationId 'com.senati.ecorecolecta', y guardarlo como 'app/google-services.json' (sin el sufijo .EXAMPLE).",
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "ecorecolecta-ecolim-demo",
+    "storage_bucket": "ecorecolecta-ecolim-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "android_client_info": { "package_name": "com.senati.ecorecolecta" }
+      },
+      "oauth_client": [],
+      "api_key": [{ "current_key": "REEMPLAZAR_CON_TU_API_KEY" }],
+      "services": {
+        "appinvite_service": { "other_platform_oauth_client": [] }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar recolección"
+            android:textColor="@color/verde_oscuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Identificacion del tipo de residuo: menu desplegable validado -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tipo de residuo" android:textColor="@color/texto_oscuro" android:textSize="13sp"/>
+        <Spinner
+            android:id="@+id/spTipoResiduo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Escaneo alterno de codigo de contenedor -->
+        <Button
+            android:id="@+id/btnEscanearCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:text="Escanear código del contenedor (opcional)"
+            android:textAllCaps="false"
+            android:textColor="@color/acento_azul"
+            android:layout_marginBottom="14dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Cantidad (kg)" android:textColor="@color/texto_oscuro" android:textSize="13sp"/>
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:inputType="numberDecimal"
+            android:hint="Ej: 12.5"
+            android:layout_marginBottom="14dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Área / Ubicación" android:textColor="@color/texto_oscuro" android:textSize="13sp"/>
+        <Spinner
+            android:id="@+id/spArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="14dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Observaciones" android:textColor="@color/texto_oscuro" android:textSize="13sp"/>
+        <EditText
+            android:id="@+id/etObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_input"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/lblFechaHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto_oscuro"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp"
+            android:text="Fecha y hora: se registran automáticamente" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_boton_verde"
+            android:text="Guardar registro"
+            android:textColor="@color/blanco"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnVerLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            android:text="Ver registros guardados"
+            android:textColor="@color/acento_azul"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

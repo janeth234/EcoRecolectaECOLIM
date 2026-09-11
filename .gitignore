@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+build/
+*.apk
+*.aab
+
+# Local configuration (nunca se sube: rutas del SDK son de cada máquina)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Claves de Firebase (repositorio público: no exponer credenciales reales)
+# Queda solo la plantilla app/google-services.json.EXAMPLE como referencia.
+app/google-services.json
+
+# Logs
+*.log
