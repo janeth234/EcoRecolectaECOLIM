@@ -3,6 +3,7 @@ package com.senati.ecorecolecta;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,7 +34,7 @@ public class ListaResiduosActivity extends AppCompatActivity {
         btnReportes.setOnClickListener(v ->
                 startActivity(new Intent(ListaResiduosActivity.this, ReportesActivity.class)));
 
-        Button btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        TextView btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         btnCerrarSesion.setOnClickListener(v -> cerrarSesion());
     }
 
