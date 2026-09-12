@@ -63,7 +63,7 @@ public class RegistroResiduoActivity extends AppCompatActivity {
         etObservaciones = findViewById(R.id.etObservaciones);
         lblFechaHora = findViewById(R.id.lblFechaHora);
         Button btnGuardar = findViewById(R.id.btnGuardar);
-        Button btnVerLista = findViewById(R.id.btnVerLista);
+        TextView btnVerLista = findViewById(R.id.btnVerLista);
         Button btnEscanear = findViewById(R.id.btnEscanearCodigo);
 
         spTipoResiduo.setAdapter(new ArrayAdapter<>(this,

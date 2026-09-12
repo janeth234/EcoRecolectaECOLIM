@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         Button btnIngresar = findViewById(R.id.btnIngresar);
         lblRecuperar = findViewById(R.id.lblRecuperar);
+        TextView lblRegistrarse = findViewById(R.id.lblRegistrarse);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Espere un momento...");
@@ -58,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         lblRecuperar.setOnClickListener(v ->
                 Toast.makeText(this, "Funcionalidad de recuperación pendiente de integrar",
                         Toast.LENGTH_SHORT).show());
+
+        lblRegistrarse.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, RegistroUsuarioActivity.class)));
     }
 
     private void validarIngreso() {

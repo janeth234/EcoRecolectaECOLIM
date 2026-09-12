@@ -1,9 +1,20 @@
 <resources>
-    <color name="verde_primario">#2E7D32</color>
-    <color name="verde_oscuro">#1B5E20</color>
-    <color name="verde_claro">#A5D6A7</color>
-    <color name="acento_azul">#0288D1</color>
-    <color name="fondo">#F1F8E9</color>
+    <!-- Paleta principal: verde-azulado (identidad ambiental ECOLIM) -->
+    <color name="teal_900">#004D40</color>
+    <color name="teal_700">#00695C</color>
+    <color name="teal_500">#00897B</color>
+    <color name="teal_200">#80CBC4</color>
+
+    <!-- Color de acento para botones principales y links destacados -->
+    <color name="ambar">#FFB300</color>
+    <color name="ambar_oscuro">#FF8F00</color>
+
+    <!-- Compatibilidad con nombres usados en el resto del proyecto -->
+    <color name="verde_primario">#00695C</color>
+    <color name="verde_oscuro">#004D40</color>
+    <color name="verde_claro">#80CBC4</color>
+    <color name="acento_azul">#00897B</color>
+    <color name="fondo">#E0F2F1</color>
     <color name="texto_oscuro">#212121</color>
     <color name="blanco">#FFFFFF</color>
     <color name="alerta">#D32F2F</color>

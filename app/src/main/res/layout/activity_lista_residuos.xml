@@ -5,42 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/fondo"
+    android:background="@drawable/bg_gradient_pantalla"
     android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registros de recolección"
-        android:textColor="@color/verde_oscuro"
+        android:textColor="@color/blanco"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvResiduos"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResiduos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blanco"
+            android:padding="6dp" />
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnReportes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         android:background="@drawable/bg_boton_verde"
         android:text="Generar reporte"
-        android:textColor="@color/blanco"
+        android:textColor="@color/teal_900"
+        android:textStyle="bold"
         android:textAllCaps="false" />
 
-    <Button
+    <TextView
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:text="Cerrar sesión"
-        android:textColor="@color/alerta"
+        android:textColor="@color/teal_200"
         android:textAllCaps="false" />
 
 </LinearLayout>

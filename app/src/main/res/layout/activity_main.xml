@@ -1,62 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/fondo"
-    android:padding="32dp">
+    android:background="@drawable/bg_gradient_pantalla"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ECOLIM S.A.C."
-        android:textColor="@color/verde_oscuro"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Registro digital de residuos sólidos"
-        android:textColor="@color/texto_oscuro"
-        android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/etUsuario"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/bg_input"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/bg_input"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECOLIM S.A.C."
+            android:textColor="@color/blanco"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_boton_verde"
-        android:text="Ingresar"
-        android:textColor="@color/blanco"
-        android:textAllCaps="false" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="28dp"
+            android:text="Registro digital de residuos sólidos"
+            android:textColor="@color/teal_200"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/lblRecuperar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="¿Olvidaste tu contraseña?"
-        android:textColor="@color/acento_azul" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/blanco"
+                android:padding="26dp">
+
+                <EditText
+                    android:id="@+id/etUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btnIngresar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_boton_verde"
+                    android:text="Ingresar"
+                    android:textColor="@color/teal_900"
+                    android:textStyle="bold"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:id="@+id/lblRecuperar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:text="¿Olvidaste tu contraseña?"
+                    android:textColor="@color/teal_700" />
+
+                <TextView
+                    android:id="@+id/lblRegistrarse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="¿No tienes cuenta? Regístrate"
+                    android:textColor="@color/ambar_oscuro"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

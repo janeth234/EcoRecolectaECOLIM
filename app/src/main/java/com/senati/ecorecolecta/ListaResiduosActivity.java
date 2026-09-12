@@ -12,14 +12,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
-/**
- * Lista, mediante un RecyclerView, todos los registros almacenados
- * localmente en SQLite. Sirve de puente hacia la pantalla de Reportes
- * y permite cerrar la sesión de Firebase iniciada en MainActivity.
- */
 public class ListaResiduosActivity extends AppCompatActivity {
 
     private DatabaseHelper dbHelper;
+    private RecyclerView rv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +24,10 @@ public class ListaResiduosActivity extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
 
-        RecyclerView rv = findViewById(R.id.rvResiduos);
+        rv = findViewById(R.id.rvResiduos);
         rv.setLayoutManager(new LinearLayoutManager(this));
 
-        List<Residuo> lista = dbHelper.obtenerResiduos(null, null, null);
-        rv.setAdapter(new ResiduoAdapter(lista));
+        cargarLista();
 
         Button btnReportes = findViewById(R.id.btnReportes);
         btnReportes.setOnClickListener(v ->
@@ -42,10 +37,14 @@ public class ListaResiduosActivity extends AppCompatActivity {
         btnCerrarSesion.setOnClickListener(v -> cerrarSesion());
     }
 
+    private void cargarLista() {
+        List<Residuo> lista = dbHelper.obtenerResiduos(null, null, null);
+        rv.setAdapter(new ResiduoAdapter(lista));
+    }
+
     private void cerrarSesion() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(ListaResiduosActivity.this, MainActivity.class);
-        // Limpia el historial de pantallas para que "atrás" no regrese a datos de la sesión anterior
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
@@ -54,6 +53,6 @@ public class ListaResiduosActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        recreate(); // refresca la lista al volver de Registro
+        cargarLista(); // refresca la lista al volver de Registro, SIN recrear la Activity
     }
 }
